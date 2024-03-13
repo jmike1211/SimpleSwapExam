@@ -6,16 +6,12 @@ contract SimpleSwap {
     // phase 1
     TestERC20 public token0;
     TestERC20 public token1;
-    uint256 public reserve0; // 代币0的储备量
-    uint256 public reserve1; // 代币1的储备量
+    uint256 public reserve0; // 代幣0的儲備量
+    uint256 public reserve1; // 代幣1的儲備量
 
     // phase 2
     uint256 public totalSupply = 0;
     mapping(address => uint256) public share;
-
-    // phase 3 x + y + x*y = k exam
-    uint256 public reserveX; // 代币X的储备量
-    uint256 public reserveY; // 代币Y的储备量
 
     constructor(address _token0, address _token1) {
         token0 = TestERC20(_token0);
